@@ -1,0 +1,22 @@
+{
+  "name": "atikul-alam-shawon",
+  "version": "1.0.0",
+  "description": "Political website for MP Atikul Alam Shawon",
+  "scripts": {
+    "install": "cd frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm start",
+    "dev": "cd frontend && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nanitex-official/Atikul-alam-shawon.git"
+  },
+  "keywords": [
+    "political-website",
+    "react",
+    "nodejs"
+  ],
+  "author": "NaniteX",
+  "license": "MIT"
+}
