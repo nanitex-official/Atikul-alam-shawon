@@ -1,0 +1,331 @@
+.contact-page {
+  padding-top: 80px;
+  background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.contact-hero-section {
+  text-align: center;
+  padding: 50px 20px 40px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.contact-subtitle {
+  color: #006838;
+  font-size: 0.95em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.contact-main-heading {
+  font-size: 3em;
+  color: #1d3557;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.contact-description {
+  font-size: 1.1em;
+  color: #6c757d;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Map Section */
+.map-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.map-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.map-container {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8f4 100%);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  opacity: 0.95;
+}
+
+/* Map Marker */
+.map-marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.marker-icon {
+  width: 20px;
+  height: 20px;
+  background: #c8102e;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(200, 16, 46, 0.4);
+  animation: pulse 2s infinite;
+  position: relative;
+  margin: 0 auto 10px;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(200, 16, 46, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(200, 16, 46, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(200, 16, 46, 0);
+  }
+}
+
+.marker-tooltip {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  min-width: 250px;
+  text-align: center;
+  pointer-events: auto;
+  margin-top: 10px;
+}
+
+.tooltip-flag {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.marker-tooltip h4 {
+  font-size: 1.1em;
+  color: #1d3557;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.marker-tooltip p {
+  font-size: 0.9em;
+  color: #6c757d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Contact Methods Section */
+.contact-methods-section {
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+}
+
+.contact-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-method-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.contact-method-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border-color: #006838;
+}
+
+.method-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.method-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 2;
+}
+
+.email-icon {
+  background: rgba(0, 104, 56, 0.1);
+  color: #006838;
+}
+
+.contact-method-card:hover .email-icon {
+  background: #006838;
+  color: white;
+  transform: scale(1.1);
+}
+
+.chat-icon {
+  background: rgba(200, 16, 46, 0.1);
+  color: #c8102e;
+}
+
+.contact-method-card:hover .chat-icon {
+  background: #c8102e;
+  color: white;
+  transform: scale(1.1);
+}
+
+.phone-icon {
+  background: rgba(29, 53, 87, 0.1);
+  color: #1d3557;
+}
+
+.contact-method-card:hover .phone-icon {
+  background: #1d3557;
+  color: white;
+  transform: scale(1.1);
+}
+
+.method-title {
+  font-size: 1.3em;
+  color: #1d3557;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.method-description {
+  font-size: 0.95em;
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.method-link {
+  display: inline-block;
+  color: #006838;
+  font-weight: 600;
+  font-size: 1em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.method-link:hover {
+  color: #004d28;
+  border-bottom-color: #006838;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-methods-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 600px;
+  }
+
+  .contact-main-heading {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding-top: 70px;
+  }
+
+  .contact-hero-section {
+    padding: 40px 20px 30px;
+  }
+
+  .contact-main-heading {
+    font-size: 2em;
+  }
+
+  .contact-description {
+    font-size: 1em;
+  }
+
+  .map-section {
+    padding: 40px 20px;
+  }
+
+  .map-container {
+    height: 350px;
+  }
+
+  .marker-tooltip {
+    min-width: 200px;
+    padding: 15px;
+  }
+
+  .marker-tooltip h4 {
+    font-size: 1em;
+  }
+
+  .marker-tooltip p {
+    font-size: 0.85em;
+  }
+
+  .contact-methods-section {
+    padding: 60px 20px;
+  }
+
+  .contact-method-card {
+    padding: 30px 20px;
+  }
+
+  .method-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .method-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .method-title {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-main-heading {
+    font-size: 1.7em;
+  }
+
+  .contact-subtitle {
+    font-size: 0.85em;
+  }
+
+  .map-container {
+    height: 300px;
+    border-radius: 8px;
+  }
+
+  .marker-tooltip {
+    transform: scale(0.9);
+    min-width: 180px;
+  }
+}

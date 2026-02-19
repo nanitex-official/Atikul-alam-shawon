@@ -1,0 +1,24 @@
+.commitments-section {
+  background-color: #ffffff;
+}
+
+.commitments-grid {
+  margin-top: 40px;
+}
+
+.view-all-link {
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+  .commitments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .commitments-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,227 @@
+/* ─────────────────────────────────────────
+   COMMITMENT / NOTABLE WORKS PAGE
+───────────────────────────────────────── */
+
+.cp-page {
+    min-height: 100vh;
+    background: #f4f6f9;
+    font-family: 'Hind Siliguri', 'SolaimanLipi', sans-serif;
+}
+
+/* ── Hero ── */
+.cp-hero {
+    position: relative;
+    background: linear-gradient(135deg, #0d1b2a 0%, #1d3557 55%, #2a5298 100%);
+    padding: 100px 24px 70px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cp-hero-pattern {
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.cp-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cp-hero-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 16px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cp-hero-subtitle {
+    font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+    color: rgba(255, 255, 255, 0.82);
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ── Stats ── */
+.cp-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #1d3557;
+}
+
+.cp-stat {
+    flex: 1 1 160px;
+    padding: 28px 20px;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.2s;
+}
+
+.cp-stat:last-child {
+    border-right: none;
+}
+
+.cp-stat:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.cp-stat-num {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f4c84a;
+    margin-bottom: 6px;
+}
+
+.cp-stat-label {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.72);
+    font-weight: 500;
+}
+
+/* ── Filter ── */
+.cp-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 36px 24px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cp-filter-btn {
+    padding: 9px 22px;
+    border-radius: 50px;
+    border: 2px solid #1d3557;
+    background: transparent;
+    color: #1d3557;
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+}
+
+.cp-filter-btn:hover {
+    background: #1d3557;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(29, 53, 87, 0.22);
+}
+
+.cp-filter-btn.active {
+    background: linear-gradient(135deg, #1d3557, #2a5298);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 4px 18px rgba(29, 53, 87, 0.32);
+}
+
+/* ── Grid Wrap ── */
+.cp-grid-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 24px 100px;
+}
+
+/* ── Grid ── */
+.cp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 28px;
+}
+
+/* ── Card ── */
+.cp-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+    transition: transform 0.25s, box-shadow 0.25s;
+    display: flex;
+    flex-direction: column;
+}
+
+.cp-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+}
+
+/* ── Card Image ── */
+.cp-card-img-wrap {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.cp-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.cp-card:hover .cp-card-img {
+    transform: scale(1.06);
+}
+
+/* ── Card Title ── */
+.cp-card-title {
+    padding: 18px 20px;
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ── Card Button ── */
+.cp-card-btn {
+    display: block;
+    margin: 0 16px 16px;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 13px 20px;
+    border-radius: 8px;
+    background: #1d3557;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.cp-card-btn:hover {
+    background: #14283e;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .cp-hero {
+        padding: 80px 16px 50px;
+    }
+
+    .cp-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cp-grid-wrap {
+        padding: 10px 16px 60px;
+    }
+
+    .cp-stat {
+        flex: 1 1 130px;
+        padding: 20px 12px;
+    }
+
+    .cp-stat-num {
+        font-size: 1.5rem;
+    }
+}
