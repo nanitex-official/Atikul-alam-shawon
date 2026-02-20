@@ -55,7 +55,7 @@ const Contact = () => {
               </div>
               <h3 className="method-title">ইমেইল ঠিকানা</h3>
               <p className="method-description">ইমেইলের মাধ্যমে যোগাযোগ করুন।</p>
-              <a href="mailto:abulkhairbhuiyan@gmail.com" className="method-link">
+              <a href="mailto:atikulalamshawon@gmail.com" className="method-link">
                 atikulalamshawon@gmail.com
               </a>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './About.css';
 
 const About = () => {
@@ -14,7 +15,7 @@ const About = () => {
               গণতন্ত্র, সুশাসন ও জনগণের ভোটাধিকার রক্ষার আন্দোলনে নেতৃত্ব দিয়েছেন; একই সঙ্গে শিক্ষা, 
               স্বাস্থ্য, সড়ক–যোগাযোগ, কৃষি ও তরুণদের কর্মসংস্থানে বাস্তব কাজ করেছেন।
             </p>
-            <a href="/candidate-introduction" className="btn">পূর্ণ পরিচিতি দেখুন</a>
+            <Link to="/candidate-introduction" className="btn">পূর্ণ পরিচিতি দেখুন</Link>
           </div>
           <div className="about-image">
             <img src={`${process.env.PUBLIC_URL}/assets/images/me.jpg`} alt="আতিকুল আলম শাওন" />

@@ -4,7 +4,6 @@ import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openSubmenu, setOpenSubmenu] = useState(null);
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -13,11 +12,9 @@ const Header = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down
         setIsHidden(true);
-        setIsMenuOpen(false); // Close menu when scrolling down
+        setIsMenuOpen(false);
       } else {
-        // Scrolling up
         setIsHidden(false);
       }
 
@@ -33,37 +30,23 @@ const Header = () => {
 
   // Prevent body scroll when menu is open
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
     return () => {
       document.body.style.overflow = 'unset';
     };
   }, [isMenuOpen]);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
-  const toggleSubmenu = (index) => {
-    setOpenSubmenu(openSubmenu === index ? null : index);
-  };
+  const toggleMenu = () => setIsMenuOpen(prev => !prev);
+  const closeMenu = () => setIsMenuOpen(false);
 
   const menuItems = [
     { title: 'হোম', path: '/' },
     { title: 'পরিচিতি', path: '/candidate-introduction' },
-    { title: 'উল্লেখযোগ্য কাজ', path: '/commitment' },
+    { title: 'উন্নয়নমূলক কাজ', path: '/commitment' },
     { title: 'গ্যালারি', path: '/gallery' },
     { title: 'সংবাদ ও আপডেট', path: '/news' },
-    { title: 'যোগাযোগ', path: '/contact' }
-  ]; 
+    { title: 'যোগাযোগ', path: '/contact' },
+  ];
 
   return (
     <header className={`header ${isHidden ? 'header-hidden' : ''}`}>
@@ -78,34 +61,19 @@ const Header = () => {
           <ul className="nav-menu">
             {menuItems.map((item, index) => (
               <li key={index} className="nav-item">
-                {item.submenu ? (
-                  <>
-                    <button
-                      className="nav-link with-submenu"
-                      onClick={() => toggleSubmenu(index)}
-                    >
-                      {item.title}
-                      <span className="arrow">▼</span>
-                    </button>
-                    <ul className={`submenu ${openSubmenu === index ? 'active' : ''}`}>
-                      {item.submenu.map((subItem, subIndex) => (
-                        <li key={subIndex} className="submenu-item">
-                          <Link to={subItem.path} className="submenu-link" onClick={closeMenu}>
-                            {subItem.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                ) : (
-                  <Link to={item.path} className="nav-link" onClick={closeMenu}>
-                    {item.title}
-                  </Link>
-                )}
+                <Link to={item.path} className="nav-link" onClick={closeMenu}>
+                  {item.title}
+                </Link>
               </li>
             ))}
           </ul>
         </nav>
+
+        <div className="nav-cta">
+          <Link to="/contact-form" className="btn-header" onClick={closeMenu}>
+            আপনার এমপিকে লিখুন
+          </Link>
+        </div>
 
         <button className={`menu-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
           <span></span>

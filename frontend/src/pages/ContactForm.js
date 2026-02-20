@@ -71,7 +71,8 @@ const ContactForm = () => {
         attachment: fileName || null
       };
 
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${apiUrl}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

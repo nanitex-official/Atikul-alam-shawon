@@ -18,7 +18,7 @@ const CandidateIntroduction = () => {
         <div className="candidate-info">
           <p className="candidate-greeting">হ্যালো, আমি</p>
           <h1 className="candidate-name">
-            আতিকুল ইসলাম <span>শাওন</span>
+            আতিকুল আলম <span>শাওন</span>
           </h1>
           <p className="candidate-title">কুমিল্লা-৭ (চান্দিনা) আসনের একজন নির্বাচিত সংসদ সদস্য</p>
           <p className="candidate-desc">

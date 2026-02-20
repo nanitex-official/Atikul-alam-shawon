@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './CallToAction.css';
 
 const CallToAction = () => {
@@ -10,9 +11,9 @@ const CallToAction = () => {
             <h4>আপনার এলাকার যেকোনো সমস্যা, অভিযোগ বা পরামর্শ সরাসরি প্রার্থী ও তার টিমকে জানাতে চান?</h4>
           </div>
           <div className="cta-button-wrapper">
-            <a href="/contact-form" className="btn btn-cta">
+            <Link to="/contact-form" className="btn btn-cta">
               বার্তা পাঠান
-            </a>
+            </Link>
           </div>
         </div>
       </div>

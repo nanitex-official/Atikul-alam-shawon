@@ -70,15 +70,7 @@ const NewsPage = () => {
                                     <div className="news-meta">
                                         <span>📅 {featured.date}</span>
                                         <span>📰 {featured.source}</span>
-                                        <span
-                                            style={{
-                                                background: '#fef2f2',
-                                                color: '#e63946',
-                                                padding: '3px 10px',
-                                                borderRadius: '20px',
-                                                fontWeight: 700,
-                                            }}
-                                        >
+                                        <span className="news-category-badge">
                                             {featured.category}
                                         </span>
                                     </div>
@@ -171,26 +163,14 @@ const NewsPage = () => {
                         </div>
 
                         {/* Contact CTA */}
-                        <div className="sidebar-widget" style={{ background: 'linear-gradient(135deg, #1d3557, #2a4a73)', color: '#fff' }}>
-                            <h4 className="sidebar-widget-title" style={{ color: '#fff', borderBottomColor: 'rgba(255,255,255,0.2)' }}>
+                        <div className="sidebar-widget contact-cta">
+                            <h4 className="sidebar-widget-title">
                                 📬 যোগাযোগ করুন
                             </h4>
-                            <p style={{ fontSize: '0.9em', lineHeight: 1.7, marginBottom: 16, opacity: 0.85 }}>
+                            <p>
                                 আপনার এলাকার সমস্যার কথা আমাদের জানান। আমরা সমাধানে সচেষ্ট থাকব।
                             </p>
-                            <a
-                                href="/contact-form"
-                                style={{
-                                    display: 'inline-block',
-                                    background: '#e63946',
-                                    color: '#fff',
-                                    padding: '10px 20px',
-                                    borderRadius: '8px',
-                                    fontWeight: 700,
-                                    fontSize: '0.92em',
-                                    textDecoration: 'none',
-                                }}
-                            >
+                            <a href="/contact-form" className="btn-contact">
                                 এখনই লিখুন →
                             </a>
                         </div>

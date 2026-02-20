@@ -372,6 +372,47 @@
     border-bottom: 2px solid #f0f0f0;
 }
 
+.sidebar-widget.contact-cta {
+    background: linear-gradient(135deg, #1d3557, #2a4a73);
+    color: #fff;
+}
+
+.sidebar-widget.contact-cta .sidebar-widget-title {
+    color: #fff;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-widget.contact-cta p {
+    font-size: 0.9em;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    opacity: 0.85;
+}
+
+.sidebar-widget.contact-cta .btn-contact {
+    display: inline-block;
+    background: #e63946;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.92em;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.sidebar-widget.contact-cta .btn-contact:hover {
+    background: #d62828;
+}
+
+.news-category-badge {
+    background: #fef2f2;
+    color: #e63946;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
 .sidebar-updates-list {
     list-style: none;
     padding: 0;

@@ -35,6 +35,7 @@
   .hero {
     height: auto;
     min-height: auto;
+    margin-top: 62px;
   }
 
   .hero-slide {
